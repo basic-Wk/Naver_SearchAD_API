@@ -6,6 +6,7 @@ from pandas import DataFrame
 
 
 import signaturehelper
+import apikeys as api
 
 
 def get_header(method, uri, api_key, secret_key, customer_id):
@@ -14,10 +15,10 @@ def get_header(method, uri, api_key, secret_key, customer_id):
     return {'Content-Type': 'application/json; charset=UTF-8', 'X-Timestamp': timestamp, 'X-API-KEY': API_KEY, 'X-Customer': str(CUSTOMER_ID), 'X-Signature': signature}
 
 
-BASE_URL = 'https://api.searchad.naver.com'
-API_KEY = '0100000000a6384c9ce78eb2dd7b3fd3b79438bd9d302370ce011949aa223bc1ed58f88cfe'
-SECRET_KEY = 'AQAAAACmOEyc546y3Xs/07eUOL2dpD+lcEfIYk5FX5fCYEFEhA=='
-CUSTOMER_ID = '2468931'
+BASE_URL = api.NaversearchADAPIkeys['BASE_URL']
+API_KEY = api.NaversearchADAPIkeys['API_KEY']
+SECRET_KEY = api.NaversearchADAPIkeys['SECRET_KEY']
+CUSTOMER_ID = api.NaversearchADAPIkeys['CUSTOMER_ID']
 
 # Adcampaign Usage Sample
 
