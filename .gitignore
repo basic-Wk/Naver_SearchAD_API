@@ -128,3 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 apikeys.py
+bin/
+etc/
+share/
