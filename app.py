@@ -12,7 +12,7 @@ app = Dash(__name__)
 # see https://plotly.com/python/px-arguments/ for more options
 df = get_df()
 
-fig = px.bar(df, x="id", y={"클릭수","노출수"})
+fig = px.bar(df, x="date", y="클릭수", color="id", barmode="group")
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),

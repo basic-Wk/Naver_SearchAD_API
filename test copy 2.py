@@ -72,3 +72,5 @@ def get_df():
     dfs.replace(campaign_dict, inplace=True)
     dfs=dfs[['id', '노출수', '클릭수', '클릭률', '평균클릭비용', '전환수', '전환율', '총비용', '전환당비용', 'date']]
     return dfs
+
+print(get_df())
