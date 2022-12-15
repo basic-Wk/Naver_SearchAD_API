@@ -16,6 +16,7 @@
 # 현재까지 진행상황
  맨위가 최신 근황임
 
+- 삽질끝에 날자별로 데이터 추출 성공. 날자별 데이터 Dash를 통해 그리기 성공.
 - 날자 다뤄본적없어 삽질중
 - 네이버 검색광고 API 설명 매우 불편. 날자별 데이터 가져오기가 한계가 있어. for문 돌려야함. 
 - Dash로 간단한 그래프 그리는 것 완성함
@@ -29,3 +30,8 @@
 - 'ad_manageent_sample.py'는 없어도됨(파일명이 왜 저러지?)
 - 'apikeys.py'라는 파일을 만들고 'NaversearchADAPIkeys'라는 변수명에다가 딕셔너리 형태로 
 'BASE_URL', 'API_KEY', 'SECRET_KEY', 'CUSTOMER_ID' 값 넣어주고 app.py 실행하면됨.
+
+# 회고
+
+- API를 request할때 params값에 JSON형식으로 변환해서 넣으세요. json.dumps() 이거 이용하면됨.
+- 날자변환 잘해놓고도 변수타입 때문에 이틀 삽질함.

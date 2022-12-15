@@ -44,7 +44,7 @@ def get_df():
     uri = '/stats'
     method = 'GET'
     stat_ids = campaign_list
-    r = requests.get(BASE_URL + uri, params={'ids': stat_ids, 'fields': '["impCnt", "clkCnt", "ctr", "cpc", "ccnt", "salesAmt", "crto", "cpConv"]', 'timeRange': '{"since":"2022-11-29","until":"2022-11-30"}'}, headers=get_header(method, uri, API_KEY, SECRET_KEY, CUSTOMER_ID))
+    r = requests.get(BASE_URL + uri, params={'ids': stat_ids, 'fields': '["impCnt", "clkCnt", "ctr", "cpc", "ccnt", "salesAmt", "crto", "cpConv"]', 'timeRange': '{"since":"2022-11-30","until":"2022-11-30"}'}, headers=get_header(method, uri, API_KEY, SECRET_KEY, CUSTOMER_ID))
 
     fields = r.json()['data']
     df = pd.DataFrame(fields)
